@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    /* font-family: "Verdana", "Geneva", "Tahoma", sans-serif; */
+    /* font-weight: 400; */
+    color: #000;
+    background-color: #fff;
+    transition: all 0.5s ease;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.container {
+    width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+/* HEADER SITE  */
+
+.site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.dark {
+    color: #fff;
+    background-color: rgb(17, 22, 40);
+}
+
+.logo__img {
+    width: 100px;
+    height: 100%;
+}
+
+.logo__img:hover {
+    opacity: 0.8;
+}
+
+.logo__img:active {
+    opacity: 0.6;
+}
+
+.site-header__nav-wrapper {
+    display: flex;
+    column-gap: 100px;
+    align-items: center;
+}
+
+.navlist {
+    display: flex;
+    column-gap: 40px;
+}
+
+.navlist__link {
+    color: rgb(151, 4, 4);
+    font-size: 24px;
+}
+
+.navlist__link:hover {
+    border-bottom: 2px solid rgb(151, 4, 4);
+}
+
+.navlist__link:active {
+    opacity: 0.6;
+}
+
+.input__selector {
+    display: none;
+}
+
+.input__selector:checked + .input__check {
+    background-image: url("../images/dark-mode.jpeg");
+}
+
+.input__selector:checked + .input__check::before {
+    left: 45px;
+}
+
+.input__check {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 50px;
+    border-radius: 60px;
+    background-image: url("../images/sun-3275314_1280.jpeg");
+    background-size: cover;
+    transition: background-image 0.5s ease;
+}
+
+.input__check::before {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    content: "";
+    transition: left 0.5s ease;
+}
